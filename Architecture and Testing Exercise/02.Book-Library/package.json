@@ -1,0 +1,21 @@
+{
+  "name": "02.Book-Library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "lite-server": "^2.6.1",
+    "mocha": "^9.0.2",
+    "playwright-chromium": "^1.12.3"
+  }
+}

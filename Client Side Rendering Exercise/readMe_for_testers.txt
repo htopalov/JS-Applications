@@ -1,2 +1,0 @@
-Every problem has own init package. So when you open the problem inside vs code, type: 'npm install'.
-After that start server: cmd-> node server.js and open index.html in http-server,lite-server or live-server.

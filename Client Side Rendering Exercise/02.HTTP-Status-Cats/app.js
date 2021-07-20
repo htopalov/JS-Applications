@@ -27,8 +27,10 @@ function onClick(e){
     let style = element.querySelector('.status').style.display;
     if (style == 'none') {
         element.querySelector('.status').style.display = 'block';
+        e.target.textContent = 'Hide status code';
     } else {
         element.querySelector('.status').style.display = 'none';
+        e.target.textContent = 'Show status code';
     }
 
 }

@@ -1,6 +1,5 @@
 import { html, render } from "./node_modules/lit-html/lit-html.js";
-import editFormTemplate from './editFormTemplate.js';
-import createFormTemplate from './createFormTemplate.js';
+import {createFormTemplate,editFormTemplate} from './formTemplates.js';
 
 let rowTemplate = (id, data) => html`
 <tr id=${id}>

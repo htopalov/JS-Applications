@@ -1,5 +1,15 @@
 import {html} from './node_modules/lit-html/lit-html.js';
 
+let createFormTemplate = () => html`
+ <form id="add-form">
+<h3>Add book</h3>
+<label>TITLE</label>
+<input type="text" name="title" placeholder="Title...">
+<label>AUTHOR</label>
+<input type="text" name="author" placeholder="Author...">
+<input type="submit" value="Submit">
+</form>`;
+
 let editFormTemplate = (book) => html`
 <form id="edit-form">
 <input type="hidden" name="id">
@@ -11,4 +21,4 @@ let editFormTemplate = (book) => html`
 <input type="submit" value="Save">
 </form>`;
 
-export default editFormTemplate;
+export {createFormTemplate,editFormTemplate}

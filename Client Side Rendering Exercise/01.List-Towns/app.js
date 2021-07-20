@@ -1,10 +1,5 @@
-import { html, render } from "./node_modules/lit-html/lit-html.js";
-
-let liTemplate = (town) => html`<li>${town}</li>`;
-let ulTemplate = (towns) => html`
-<ul>
-    ${towns.map(t=> liTemplate(t))}
-</ul>`;
+import { render } from "./node_modules/lit-html/lit-html.js";
+import {ulTemplate} from './templates.js';
 
 let container = document.getElementById('root');
 document.querySelector('form').addEventListener('submit', (e)=>{
@@ -12,4 +7,5 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     let formData = new FormData(e.target);
     let towns = formData.get('towns').split(', ');
     render(ulTemplate(towns),container);
+    e.target.reset();
 });

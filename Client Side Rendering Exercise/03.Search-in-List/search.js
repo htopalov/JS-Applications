@@ -1,16 +1,10 @@
 import {towns} from './towns.js';
-import {html, render} from './node_modules/lit-html/lit-html.js';
-
-let liTemplate = (town) => html`
-<li>${town}</li>`;
-
-let ulTemplate = (towns) => html`
-<ul>
-   ${towns.map(t=>liTemplate(t))}
-</ul>`;
+import {render} from './node_modules/lit-html/lit-html.js';
+import {ulTemplate} from './templates.js';
 
 render(ulTemplate(towns), document.getElementById('towns'));
 document.querySelector('button').addEventListener('click', search);
+document.getElementById('searchText').addEventListener('click', clearClass);
 
 function search() {
    let liElements = document.getElementsByTagName('li');
@@ -22,5 +16,12 @@ function search() {
          city.className = 'active';
       }
    }
+   document.getElementById('result').style.display = 'block';
    document.getElementById('result').textContent = `${resultCount} matches found`;
+   document.getElementById('searchText').value = '';
+}
+
+function clearClass(){
+   Array.from(document.getElementsByTagName('li')).forEach(x=>x.className ='');
+   document.getElementById('result').style.display = 'none';
 }

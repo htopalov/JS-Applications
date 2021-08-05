@@ -1,4 +1,5 @@
 import {html} from '../../node_modules/lit-html/lit-html.js';
+import { notificationView } from './notification.js';
 
 let createTemplate = (onSubmit) =>html`
         <section id="create-meme">
@@ -42,7 +43,10 @@ export async function createView(context){
                 throw new Error(error.message);
             }
         } catch (err){
-            return alert(err.message);
+            notificationView(err.message);
+            setTimeout(() => {
+                document.getElementById('notifications').style.display = 'none';
+            },3000);
         }
     }
 }

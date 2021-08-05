@@ -64,8 +64,6 @@ export async function detailsView(context){
         //all other logic for likes is simple
 
 
-
-
         // let userId = sessionStorage.getItem('userId');
         // let response = await fetch(`http://localhost:3030/data/likes?where=movieId%3D%22${id}%22%20and%20_ownerId%3D%22${userId}%22`);
         // let result = await response.json();

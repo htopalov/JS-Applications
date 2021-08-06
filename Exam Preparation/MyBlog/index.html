@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="./src/app.js" type="module"></script>
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <h1>MyBlog</h1>
+    <h2 class="user">Welcome <span id="message-name"></span>!</h2>
+    <nav id="nav">
+      <ul>
+        <li class="user"><a id="logoutBtn" href="javascript:void(0)">Logout</a></li>
+        <li class="guest"><a href="/">Home</a></li>
+        <li class="guest"><a href="/login">Login</a></li>
+        <li class="guest"><a href="/register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="root"></div>
+</body>
+
+</html>

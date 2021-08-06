@@ -1,0 +1,1 @@
+Totally wrong logic of skeleton and lack of server for data to get, so I've solved the problem half way.

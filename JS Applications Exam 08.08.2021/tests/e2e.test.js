@@ -4,8 +4,8 @@ const { expect } = require('chai');
 const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
 const interval = 600;
 const timeout = 6000;
-const DEBUG = true;
-const slowMo = 1000;
+const DEBUG = false;
+const slowMo = 500;
 
 const mockData = require('./mock-data.json');
 const endpoints = {
@@ -627,7 +627,7 @@ describe('E2E tests', function () {
             expect(likes[0]).to.contains('Likes: 6');
         });
 
-        it('Like button should be hidden(not visible) after а click on it [ 2 Points ]', async () => {
+        it.only('Like button should be hidden(not visible) after а click on it [ 2 Points ]', async () => {
             // Login user
             const { post } = await createHandler(endpoints.like, { post: mockData.likes[2] });
             const user = mockData.users[0];
@@ -670,7 +670,7 @@ describe('E2E tests', function () {
 
         });
 
-        it('Like button should increase total likes by 1 after a click on it [ 3 Points ]', async () => {
+        it.only('Like button should increase total likes by 1 after a click on it [ 3 Points ]', async () => {
             // Login user
             const { post } = await createHandler(endpoints.like, { post: mockData.likes[2] });
             const user = mockData.users[0];
